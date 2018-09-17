@@ -49,7 +49,7 @@
           "recipe": {
             "contentType": "",
             "type": "dockerimage",
-            "content": "jonahkichwacoders/theia-usbdebug:next"
+            "content": "jonahkichwacoders/che-theia-usbdebug:6.11.0"
           }
         }
       },
