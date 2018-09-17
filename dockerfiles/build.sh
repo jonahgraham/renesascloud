@@ -68,8 +68,8 @@ else
 fi
 
 if [ $? -eq 0 ]; then
-  echo "${GREEN}All images have been generated successfully${NC}"
+  printf "${GREEN}All images have been generated successfully${NC}"
 else
-  echo "${RED}Failure when building a docker image"
+  printf "${RED}Failure when building a docker image${NC}"
   exit 1
 fi
