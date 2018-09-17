@@ -115,19 +115,6 @@
         </dependencySet>
         <dependencySet>
             <useProjectArtifact>false</useProjectArtifact>
-            <unpack>true</unpack>
-            <outputDirectory>templates</outputDirectory>
-            <includes>
-                <include>org.eclipse.che.core:che-core-ide-templates</include>
-            </includes>
-            <unpackOptions>
-                <excludes>
-                    <exclude>META-INF/**</exclude>
-                </excludes>
-            </unpackOptions>
-        </dependencySet>
-        <dependencySet>
-            <useProjectArtifact>false</useProjectArtifact>
             <unpack>false</unpack>
             <outputDirectory>lib</outputDirectory>
             <includes>
@@ -161,6 +148,12 @@
             <source>${project.basedir}/src/assembly/tomcat/conf/server.xml</source>
             <outputDirectory>tomcat/conf</outputDirectory>
             <destName>server.xml</destName>
+            <fileMode>755</fileMode>
+        </file>
+        <file>
+            <source>${project.basedir}/src/samples/samples.json</source>
+            <outputDirectory>templates</outputDirectory>
+            <destName>samples.json</destName>
             <fileMode>755</fileMode>
         </file>
     </files>

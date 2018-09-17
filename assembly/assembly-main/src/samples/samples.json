@@ -1,0 +1,89 @@
+[
+  {
+    "name": "console-c-simple",
+    "displayName": "Hello World Example",
+    "path": "/console-c-simple",
+    "description": "C program that prints Hello World to the console.",
+    "projectType": "c",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "c"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/jonahkichwacoders/e2cloud-sample-console-c-simple.git",
+      "parameters": {}
+    },
+    "commands": [],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "cpp",
+      "gcc",
+      "e2cloud",
+      "renesas"
+    ]
+  },
+  {
+    "name": "blinky",
+    "displayName": "Blinky Example",
+    "path": "/blinky",
+    "description": "The classic LED blinking program",
+    "projectType": "c",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "c"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/jonahkichwacoders/e2cloud-sample-blinky.git",
+      "parameters": {}
+    },
+    "commands": [],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "cpp",
+      "gcc",
+      "e2cloud",
+      "renesas"
+    ]
+  },
+  {
+    "name": "GStreamer-Camera-Capture-Example",
+    "displayName": "GStreamer Camera Capture Example",
+    "path": "/cam-cap",
+    "description": "Demonstrate connecting RZG to to a camera and capture results.",
+    "projectType": "c",
+    "mixins": [],
+    "attributes": {
+      "language": [
+        "c"
+      ]
+    },
+    "modules": [],
+    "problems": [],
+    "source": {
+      "type": "git",
+      "location": "https://github.com/jonahkichwacoders/e2cloud-sample-cam-cap.git",
+      "parameters": {}
+    },
+    "commands": [],
+    "links": [],
+    "category": "Samples",
+    "tags": [
+      "cpp",
+      "gcc",
+      "e2cloud",
+      "renesas"
+    ]
+  }
+]
