@@ -42,7 +42,7 @@ init() {
   ORGANIZATION="jonahkichwacoders"
   PREFIX="che"
   TAG="6.11.0"
-  SKIP_TESTS=false
+  SKIP_TESTS=true
   NAME="che"
   ARGS=""
   OPTIONS=""
