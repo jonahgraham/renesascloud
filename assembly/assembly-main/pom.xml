@@ -62,7 +62,7 @@
             <classifier>linux_amd64</classifier>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.che.core</groupId>
+            <groupId>com.renesas.cloud</groupId>
             <artifactId>che-core-ide-stacks</artifactId>
             <type>jar</type>
         </dependency>

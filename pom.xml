@@ -26,6 +26,7 @@
     <name>Che Parent</name>
     <modules>
         <module>assembly</module>
+        <module>ide</module>
     </modules>
     <properties>
         <che.docs.version>6.11.0</che.docs.version>
@@ -684,7 +685,7 @@
                 <version>${che.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.che.core</groupId>
+                <groupId>com.renesas.cloud</groupId>
                 <artifactId>che-core-ide-stacks</artifactId>
                 <version>${che.version}</version>
             </dependency>

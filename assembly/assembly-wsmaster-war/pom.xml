@@ -210,7 +210,7 @@
             <artifactId>che-core-db-vendor-postgresql</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.che.core</groupId>
+            <groupId>com.renesas.cloud</groupId>
             <artifactId>che-core-ide-stacks</artifactId>
         </dependency>
         <dependency>
