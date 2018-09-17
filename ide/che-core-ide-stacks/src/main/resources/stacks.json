@@ -7,8 +7,7 @@
     "scope": "general",
     "tags": [
       "Theia",
-      "Alpine",
-      "CentOS"
+      "renesas"
     ],
     "workspaceConfig": {
       "environments": {
