@@ -22,6 +22,14 @@ skip_tests() {
   fi
 }
 
+skip_push() {
+  if [ $SKIP_PUSH = "true" ]; then
+    return 0
+  else
+    return 1
+  fi
+}
+
 prepare_build_args() {
     IFS=',' read -r -a BUILD_ARGS_ARRAY <<< "$@"
     for i in ${BUILD_ARGS_ARRAY[@]}; do
@@ -43,6 +51,7 @@ init() {
   PREFIX="che"
   TAG="6.11.0"
   SKIP_TESTS=true
+  SKIP_PUSH=true
   NAME="che"
   ARGS=""
   OPTIONS=""
@@ -74,6 +83,12 @@ init() {
         shift ;;
       --skip-tests)
         SKIP_TESTS=true
+        shift ;;
+      --skip-push)
+        SKIP_PUSH=true
+        shift ;;
+      --push)
+        SKIP_PUSH=false
         shift ;;
       --dockerfile:*)
         DOCKERFILE="${1#*:}"
@@ -133,6 +148,15 @@ build_image() {
   rm ${DIR}/.Dockerfile
   if [ $? -eq 0 ]; then
     printf "Build of ${BLUE}${IMAGE_NAME} ${GREEN}[OK]${NC}\n"
+    if ! skip_push; then
+      docker push ${IMAGE_NAME}
+      if [ $? -eq 0 ]; then
+        printf "  /push ${BLUE}${IMAGE_NAME}${NC} ${GREEN}[OK]${NC}\n"
+      else
+        printf "${RED}Failure when building docker image ${IMAGE_NAME}${NC}\n"
+        exit 1
+      fi
+    fi
     if [ ! -z "${IMAGE_ALIASES}" ]; then
       for TMP_IMAGE_NAME in ${IMAGE_ALIASES}
       do
@@ -142,6 +166,15 @@ build_image() {
         else
           printf "${RED}Failure when building docker image ${IMAGE_NAME}${NC}\n"
           exit 1
+        fi
+        if ! skip_push; then
+          docker push ${TMP_IMAGE_NAME}:${TAG}
+          if [ $? -eq 0 ]; then
+            printf "  /push ${BLUE}${TMP_IMAGE_NAME}:${TAG}${NC} ${GREEN}[OK]${NC}\n"
+          else
+            printf "${RED}Failure when building docker image ${IMAGE_NAME}${NC}\n"
+            exit 1
+          fi
         fi
 
       done
