@@ -1,9 +1,9 @@
 [
   {
-    "id": "simple-theia-docker",
+    "id": "simple-theia-docker-renesas",
     "creator": "ide",
-    "name": "Theia IDE on docker",
-    "description": "Theia in a sidecar container (docker)",
+    "name": "Theia IDE on docker renesas",
+    "description": "Theia in a sidecar container (docker) renesas",
     "scope": "general",
     "tags": [
       "Theia",

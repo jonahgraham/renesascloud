@@ -41,7 +41,7 @@ init() {
 
   ORGANIZATION="jonahkichwacoders"
   PREFIX="che"
-  TAG="nightly"
+  TAG="6.11.0"
   SKIP_TESTS=false
   NAME="che"
   ARGS=""

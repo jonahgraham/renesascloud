@@ -28,7 +28,12 @@ RUN set -x \
 COPY runtime-dependencies/package.json /runtime/
 COPY . /lib-typescript/
 
-RUN cd /lib-typescript/ && npm install && npm test \
-    && cd /runtime && npm install && /lib-typescript/node_modules/.bin/tsc --project /lib-typescript/ \
-    && mv /lib-typescript/lib /che-lib && cd /lib-typescript/src && find . -name "*.properties" -exec install -D {} /che-lib/{} \;\
-    && rm -rf /lib-typescript && mv /runtime/node_modules /che-lib && rm -rf /runtime
+RUN cd /lib-typescript/ && npm install
+RUN cd /lib-typescript/ && npm test
+RUN cd /runtime && npm install 
+RUN /lib-typescript/node_modules/.bin/tsc --project /lib-typescript/
+RUN mv /lib-typescript/lib /che-lib 
+RUN cd /lib-typescript/src && find . -name "*.properties" -exec install -D {} /che-lib/{} \;
+RUN rm -rf /lib-typescript 
+RUN mv /runtime/node_modules /che-lib 
+RUN rm -rf /runtime
