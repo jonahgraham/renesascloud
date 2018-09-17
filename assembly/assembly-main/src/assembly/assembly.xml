@@ -49,12 +49,16 @@
         </dependencySet>
         <dependencySet>
             <useProjectArtifact>false</useProjectArtifact>
-            <unpack>false</unpack>
-            <outputDirectory>tomcat/webapps</outputDirectory>
-            <outputFileNameMapping>dashboard.war</outputFileNameMapping>
+            <unpack>true</unpack>
+            <outputDirectory>tomcat/webapps/dashboard</outputDirectory>
             <includes>
                 <include>org.eclipse.che.dashboard:che-dashboard-war</include>
             </includes>
+            <unpackOptions>
+                <excludes>
+                    <exclude>assets/branding/**</exclude>
+                </excludes>
+            </unpackOptions>
         </dependencySet>
         <dependencySet>
             <useProjectArtifact>false</useProjectArtifact>
@@ -146,6 +150,10 @@
               <include>LICENSE</include>
               <include>README</include>
            </includes>
+        </fileSet>
+       <fileSet>
+            <directory>${project.basedir}/src/branding</directory>
+            <outputDirectory>tomcat/webapps/dashboard/assets/branding</outputDirectory>
         </fileSet>
     </fileSets>
       <files>
