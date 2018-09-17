@@ -15,8 +15,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>che-assembly-parent</artifactId>
-        <groupId>org.eclipse.che</groupId>
+        <artifactId>assembly-parent</artifactId>
+        <groupId>com.renesas.cloud</groupId>
         <version>6.11.0</version>
     </parent>
     <artifactId>assembly-wsagent-server</artifactId>
@@ -32,7 +32,7 @@
             <artifactId>maven-dependency-tree</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.che</groupId>
+            <groupId>com.renesas.cloud</groupId>
             <artifactId>assembly-wsagent-war</artifactId>
             <type>war</type>
         </dependency>

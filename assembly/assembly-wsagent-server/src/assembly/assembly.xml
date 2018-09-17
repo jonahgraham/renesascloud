@@ -45,7 +45,7 @@
             <outputDirectory>webapps</outputDirectory>
             <outputFileNameMapping>ROOT.war</outputFileNameMapping>
             <includes>
-                <include>org.eclipse.che:assembly-wsagent-war</include>
+                <include>com.renesas.cloud:assembly-wsagent-war</include>
             </includes>
         </dependencySet>
     </dependencySets>

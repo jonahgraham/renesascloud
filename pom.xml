@@ -19,35 +19,14 @@
         <groupId>org.eclipse.che.depmgt</groupId>
         <version>6.11.0</version>
     </parent>
-    <groupId>org.eclipse.che</groupId>
-    <artifactId>che-parent</artifactId>
+    <groupId>com.renesas.cloud</groupId>
+    <artifactId>parent</artifactId>
     <version>6.11.0</version>
     <packaging>pom</packaging>
     <name>Che Parent</name>
     <modules>
-        <module>core</module>
-        <module>wsmaster</module>
-        <module>wsagent</module>
-        <module>multiuser</module>
-        <module>ide</module>
-        <module>agents</module>
-        <module>infrastructures</module>
-        <module>plugins</module>
-        <module>ide/che-ide-core</module>
-        <module>ide/che-ide-full</module>
-        <module>ide/che-ide-gwt-app</module>
-        <module>dashboard</module>
-        <module>workspace-loader</module>
         <module>assembly</module>
-        <module>selenium</module>
-        <module>dockerfiles</module>
     </modules>
-    <scm>
-        <connection>scm:git:git@github.com:eclipse/che.git</connection>
-        <developerConnection>scm:git:git@github.com:eclipse/che.git</developerConnection>
-        <tag>6.11.0</tag>
-        <url>https://github.com/eclipse/che</url>
-    </scm>
     <properties>
         <che.docs.version>6.11.0</che.docs.version>
         <che.lib.version>6.11.0</che.lib.version>
@@ -77,47 +56,47 @@
                 <version>${org.apache.tomcat.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.che</groupId>
+                <groupId>com.renesas.cloud</groupId>
                 <artifactId>assembly-factory-war</artifactId>
                 <version>${che.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.che</groupId>
+                <groupId>com.renesas.cloud</groupId>
                 <artifactId>assembly-ide-war</artifactId>
                 <version>${che.version}</version>
                 <type>war</type>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.che</groupId>
+                <groupId>com.renesas.cloud</groupId>
                 <artifactId>assembly-main</artifactId>
                 <version>${che.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.che</groupId>
+                <groupId>com.renesas.cloud</groupId>
                 <artifactId>assembly-workspace-loader-war</artifactId>
                 <version>${che.version}</version>
                 <type>war</type>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.che</groupId>
+                <groupId>com.renesas.cloud</groupId>
                 <artifactId>assembly-wsagent-server</artifactId>
                 <version>${che.version}</version>
                 <type>tar.gz</type>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.che</groupId>
+                <groupId>com.renesas.cloud</groupId>
                 <artifactId>assembly-wsagent-war</artifactId>
                 <version>${che.version}</version>
                 <type>war</type>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.che</groupId>
+                <groupId>com.renesas.cloud</groupId>
                 <artifactId>assembly-wsagent-war</artifactId>
                 <version>${che.version}</version>
                 <classifier>classes</classifier>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.che</groupId>
+                <groupId>com.renesas.cloud</groupId>
                 <artifactId>assembly-wsmaster-war</artifactId>
                 <version>${che.version}</version>
                 <type>war</type>
