@@ -2,8 +2,8 @@
   {
     "id": "simple-theia-docker-renesas",
     "creator": "ide",
-    "name": "Theia IDE on docker renesas",
-    "description": "Theia in a sidecar container (docker) renesas",
+    "name": "Renesas Synergy with Theia IDE",
+    "description": "Renesas Synergy with Theia IDE",
     "scope": "general",
     "tags": [
       "Theia",
@@ -50,7 +50,7 @@
           "recipe": {
             "contentType": "",
             "type": "dockerimage",
-            "content": "eclipse/che-theia:0.3.14-6.11.0"
+            "content": "jonahkichwacoders/theia-usbdebug:next"
           }
         }
       },
@@ -60,7 +60,7 @@
       "commands": []
     },
     "stackIcon": {
-      "name": "type-theia.svg",
+      "name": "type-cpp.svg",
       "mediaType": "image/svg+xml"
     }
   }
