@@ -125,6 +125,12 @@ RUN chmod g+rw /home && \
   chown -R theia:theia /home/theia && \
   chown -R theia:theia /home/project;
 
+# Supervisord
+RUN apt-get -y install supervisor
+ADD start.sh /home/theia/
+ADD supervisord.conf /etc/
+ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
+
 #Theia
 ##Needed for node-gyp, nsfw build
 RUN apt-get update && apt-get install -y python build-essential
@@ -138,12 +144,11 @@ USER theia
 EXPOSE 3000 3030
 ENV SHELL /bin/bash
 
-ADD theia /home/theia
 WORKDIR /home/theia
-RUN sudo chown -R theia:theia .
-WORKDIR /home/theia/examples/browser/
+ARG GITHUB_TOKEN
+ARG THEIA_GIT_REPO=https://github.com/jonahgraham/theia.git
+ARG THEIA_BRANCH=master
+RUN git clone --depth 1 --branch ${THEIA_BRANCH} ${THEIA_GIT_REPO} theia && rm -rf theia/.git
+RUN cd /home/theia/theia && yarn
+WORKDIR /home/theia/theia/examples/browser/
 
-RUN sudo apt-get -y install supervisor
-ADD start.sh /home/theia/
-ADD supervisord.conf /etc/
-ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
