@@ -16,7 +16,7 @@
 cheWorkspaceHttpProxy: ""
 cheWorkspaceHttpsProxy: ""
 cheWorkspaceNoProxy: ""
-cheImage: eclipse/che-server:nightly
+cheImage: jonahkichwacoders/che-server:6.11.0
 cheImagePullPolicy: Always
 cheKeycloakRealm: "che"
 cheKeycloakClientId: "che-public"
@@ -27,11 +27,11 @@ cheKeycloakClientId: "che-public"
 
 global:
   cheNamespace: ""
-  multiuser: false
+  multiuser: true
   #  This value can be passed if custom Oidc provider is used, and there is no need to deploy keycloak in multiuser mode
   #  default (if empty) is true
   #cheDedicatedKeycloak: false
-  ingressDomain: 192.168.99.100.nip.io
+  ingressDomain: 10.226.104.149.nip.io
   # See --annotations-prefix flag (https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/cli-arguments.md)
   ingressAnnotationsPrefix: "nginx."
   # options: default-host, single-host, multi-host
