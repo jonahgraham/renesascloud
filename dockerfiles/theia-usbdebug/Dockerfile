@@ -135,22 +135,14 @@ ADD gcc-arm-none-eabi-7-2018-q2-update-linux.tar.bz2 /home/toolchain/
 ENV PATH $PATH:/home/toolchain/gcc-arm-none-eabi-7-2018-q2-update/bin
 
 USER theia
-# ARG version=latest
-# WORKDIR /home/theia
-# ADD $version.package.json ./package.json
-# ARG GITHUB_TOKEN
-# RUN yarn --cache-folder ./ycache && rm -rf ./ycache
-# RUN yarn theia build
-EXPOSE 3000
+EXPOSE 3000 3030
 ENV SHELL /bin/bash
 
 ADD theia /home/theia
 WORKDIR /home/theia
 RUN sudo chown -R theia:theia .
-RUN yarn
 WORKDIR /home/theia/examples/browser/
 
-# CMD [ "yarn", "run", "start", "/home/project", "--hostname=0.0.0.0" ]
 RUN sudo apt-get -y install supervisor
 ADD start.sh /home/theia/
 ADD supervisord.conf /etc/
