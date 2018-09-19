@@ -4,6 +4,7 @@
 - Start minikube with sufficient resources and RBAC enabled
   - for minikube 0.26.0 and greater `minikube start --cpus 2 --memory 4096 --extra-config=apiserver.authorization-mode=RBAC`
   - for minikube 0.25.2 and lower `minikube start --cpus 2 --memory 4096 --extra-config=apiserver.Authorization.Mode=RBAC`
+  - for Renesas `sudo -E minikube start --extra-config=apiserver.authorization-mode=RBAC --docker-env=HTTP_PROXY=${http_proxy} --docker-env=HTTPS_PROXY=${https_proxy}`
 - Add cluster-admin role for `kube-system:default` account
   - `kubectl create clusterrolebinding add-on-cluster-admin --clusterrole=cluster-admin --serviceaccount=kube-system:default`
 - Install the [Helm](https://github.com/kubernetes/helm/blob/master/docs/install.md) CLI
@@ -14,7 +15,7 @@
   - Create a [tiller serviceAccount](https://github.com/kubernetes/helm/blob/master/docs/rbac.md): `kubectl create serviceaccount tiller --namespace kube-system`
    - Bind it to the almighty cluster-admin role: `kubectl apply -f ./tiller-rbac.yaml`
   - Install tiller itself: `helm init --service-account tiller`
-- Ensure that you have an NGINX-based ingress controller. Note: This is the default ingress controller on Minikube. You can start it with `minikube addons enable ingress`
+- Ensure that you have an NGINX-based ingress controller. Note: This is the default ingress controller on Minikube. You can start it with `sudo -E minikube addons enable ingress`
 - DNS discovery should be enabled. Note: It is enabled by default in minikube.
 
 ## Deployment Process
