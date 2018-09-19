@@ -44,6 +44,11 @@
             <type>war</type>
         </dependency>
         <dependency>
+            <groupId>com.renesas.cloud</groupId>
+            <artifactId>che-core-ide-stacks</artifactId>
+            <type>jar</type>
+        </dependency>
+        <dependency>
             <groupId>org.eclipse.che</groupId>
             <artifactId>bootstrapper</artifactId>
             <type>zip</type>
@@ -60,11 +65,6 @@
             <artifactId>terminal-agent</artifactId>
             <type>tar.gz</type>
             <classifier>linux_amd64</classifier>
-        </dependency>
-        <dependency>
-            <groupId>com.renesas.cloud</groupId>
-            <artifactId>che-core-ide-stacks</artifactId>
-            <type>jar</type>
         </dependency>
         <dependency>
             <groupId>org.eclipse.che.core</groupId>

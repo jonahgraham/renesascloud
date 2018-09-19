@@ -24,17 +24,17 @@
     <name>Che Assembly Workspace Agent Server</name>
     <dependencies>
         <dependency>
+            <groupId>com.renesas.cloud</groupId>
+            <artifactId>assembly-wsagent-war</artifactId>
+            <type>war</type>
+        </dependency>
+        <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.maven.shared</groupId>
             <artifactId>maven-dependency-tree</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.renesas.cloud</groupId>
-            <artifactId>assembly-wsagent-war</artifactId>
-            <type>war</type>
         </dependency>
         <dependency>
             <groupId>org.eclipse.che.core</groupId>

@@ -42,21 +42,6 @@
                 <version>${version.jsr305.plugin}</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.tomcat</groupId>
-                <artifactId>tomcat-catalina</artifactId>
-                <version>${org.apache.tomcat.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.tomcat</groupId>
-                <artifactId>tomcat-dbcp</artifactId>
-                <version>${org.apache.tomcat.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.tomcat</groupId>
-                <artifactId>tomcat-servlet-api</artifactId>
-                <version>${org.apache.tomcat.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>com.renesas.cloud</groupId>
                 <artifactId>assembly-factory-war</artifactId>
                 <version>${che.version}</version>
@@ -101,6 +86,26 @@
                 <artifactId>assembly-wsmaster-war</artifactId>
                 <version>${che.version}</version>
                 <type>war</type>
+            </dependency>
+            <dependency>
+                <groupId>com.renesas.cloud</groupId>
+                <artifactId>che-core-ide-stacks</artifactId>
+                <version>${che.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>tomcat-catalina</artifactId>
+                <version>${org.apache.tomcat.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>tomcat-dbcp</artifactId>
+                <version>${org.apache.tomcat.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>tomcat-servlet-api</artifactId>
+                <version>${org.apache.tomcat.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.che</groupId>
@@ -682,11 +687,6 @@
             <dependency>
                 <groupId>org.eclipse.che.core</groupId>
                 <artifactId>che-core-ide-generators</artifactId>
-                <version>${che.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.renesas.cloud</groupId>
-                <artifactId>che-core-ide-stacks</artifactId>
                 <version>${che.version}</version>
             </dependency>
             <dependency>
